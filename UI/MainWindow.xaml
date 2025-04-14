@@ -1,0 +1,67 @@
+﻿<Window x:Class="ReactorOptimizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="核反应堆模拟器" Height="600" Width="1000">
+    <DockPanel>
+
+        <!-- 顶部控制栏 -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+            <Button Content="▶️ 开始" Width="80" Margin="5" Click="Start_Click"/>
+            <Button Content="⏸️ 暂停" Width="80" Margin="5" Click="Pause_Click"/>
+            <Button Content="🔁 重置" Width="80" Margin="5" Click="Reset_Click"/>
+            <TextBlock Text="{Binding ReactorTemperature}" FontSize="16" Foreground="Red" Margin="20,0,0,0"/>
+            <TextBlock Text="{Binding TotalEUText}" FontSize="16" Foreground="Green" Margin="20,0,0,0"/>
+        </StackPanel>
+
+        <!-- 主区域 -->
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 左侧组件列表 -->
+            <ListBox ItemsSource="{Binding ComponentLibrary}" SelectionMode="Single" Width="180" Margin="10">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="4" MouseMove="ComponentItem_MouseMove">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{Binding IconPath}" Width="24" Height="24" Margin="0,0,5,0"/>
+                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <!-- 网格显示 -->
+            <ItemsControl ItemsSource="{Binding ReactorCells}" Grid.Column="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="9" Rows="6"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" BorderBrush="Gray" Background="{Binding HeatColor}"
+                                AllowDrop="True"
+                                Drop="Cell_Drop"
+                                DragOver="Cell_DragOver"
+                                Margin="1">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding ComponentName}" FontSize="10" />
+                                <TextBlock Text="{Binding HeatText}" FontSize="10" />
+                                <TextBlock Text="{Binding EnergyOutputText}" FontSize="10" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+
+    </DockPanel>
+
+</Window>

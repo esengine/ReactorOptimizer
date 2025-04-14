@@ -1,0 +1,79 @@
+## ----------------------------------------
+## Build artifacts
+## ----------------------------------------
+bin/
+obj/
+out/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ----------------------------------------
+## VS-specific
+## ----------------------------------------
+.vs/
+.vscode/
+
+## ----------------------------------------
+## NuGet
+## ----------------------------------------
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+*.nuproj
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## ----------------------------------------
+## Rider-specific
+## ----------------------------------------
+.idea/
+*.sln.iml
+
+## ----------------------------------------
+## Windows files
+## ----------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## ----------------------------------------
+## Logs / Dumps
+## ----------------------------------------
+*.log
+*.tlog
+*.patch
+*.orig
+
+## ----------------------------------------
+## Others
+## ----------------------------------------
+*.DS_Store
+*.dbmdl
+*.bak
+*.tmp
+*.scc
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+*.sdf
+*.cache
+*.suo
+*.user
+*.ilk
+*.pdb
+*.iobj
+*.ipdb
+
+## ----------------------------------------
+## Publish folders
+## ----------------------------------------
+publish/
+AppPackages/
+TestResults/
