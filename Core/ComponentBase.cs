@@ -3,6 +3,7 @@ namespace ReactorOptimizer.Core;
 public abstract class ComponentBase
 {
     public string DisplayName { get; set; } = "";
+    public string? IconPath { get; set; }
     
     public virtual void Tick(ReactorCore core, List<IHeatStorage> neighbors)
     {

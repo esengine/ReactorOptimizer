@@ -29,39 +29,50 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Icons\advanced_heat_exchanger.png">
+      <None Remove="Icons\advanced_heat_exchanger.png" />
+      <Resource Include="Icons\advanced_heat_exchanger.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\component_heat_exchanger.png">
+      </Resource>
+      <None Remove="Icons\component_heat_exchanger.png" />
+      <Resource Include="Icons\component_heat_exchanger.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\component_heat_vent.png">
+      </Resource>
+      <None Remove="Icons\component_heat_vent.png" />
+      <Resource Include="Icons\component_heat_vent.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\dual_uranium_fuel_rod.png">
+      </Resource>
+      <None Remove="Icons\dual_uranium_fuel_rod.png" />
+      <Resource Include="Icons\dual_uranium_fuel_rod.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\heat_exchanger.png">
+      </Resource>
+      <None Remove="Icons\heat_exchanger.png" />
+      <Resource Include="Icons\heat_exchanger.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\heat_vent.png">
+      </Resource>
+      <None Remove="Icons\heat_vent.png" />
+      <Resource Include="Icons\heat_vent.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\overclocked_heat_vent.png">
+      </Resource>
+      <None Remove="Icons\overclocked_heat_vent.png" />
+      <Resource Include="Icons\overclocked_heat_vent.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\quad_uranium_fuel_rod.png">
+      </Resource>
+      <None Remove="Icons\quad_uranium_fuel_rod.png" />
+      <Resource Include="Icons\quad_uranium_fuel_rod.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\reactor_heat_exchanger.png">
+      </Resource>
+      <None Remove="Icons\reactor_heat_exchanger.png" />
+      <Resource Include="Icons\reactor_heat_exchanger.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\reactor_heat_vent.png">
+      </Resource>
+      <None Remove="Icons\reactor_heat_vent.png" />
+      <Resource Include="Icons\reactor_heat_vent.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Icons\uranium_fuel_rod.png">
+      </Resource>
+      <None Remove="Icons\uranium_fuel_rod.png" />
+      <Resource Include="Icons\uranium_fuel_rod.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      </Resource>
     </ItemGroup>
 
 </Project>

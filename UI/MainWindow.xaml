@@ -52,6 +52,7 @@
                                 DragOver="Cell_DragOver"
                                 Margin="1">
                             <StackPanel HorizontalAlignment="Center">
+                                <Image Source="{Binding IconPath}" Width="24" Height="24" Margin="0,2"/>
                                 <TextBlock Text="{Binding ComponentName}" FontSize="10" />
                                 <TextBlock Text="{Binding HeatText}" FontSize="10" />
                                 <TextBlock Text="{Binding EnergyOutputText}" FontSize="10" />

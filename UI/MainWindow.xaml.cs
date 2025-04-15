@@ -61,6 +61,7 @@ public partial class MainWindow : Window
             {
                 var newComponent = def.Factory();
                 newComponent.DisplayName = def.Name;
+                newComponent.IconPath = def.IconPath;
 
                 cell.Component = newComponent;
 

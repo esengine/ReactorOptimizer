@@ -28,9 +28,11 @@ public class ReactorCellViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(HeatColor));
             OnPropertyChanged(nameof(HeatText));
             OnPropertyChanged(nameof(ComponentName));
+            OnPropertyChanged(nameof(IconPath));
         }
     }
 
+    public string IconPath => Component?.IconPath ?? "";
     public string ComponentName => Component?.DisplayName ?? "空格";
     public string HeatText => Component is IHeatStorage hs ? $"{hs.CurrentHeat} HU" : "";
 
